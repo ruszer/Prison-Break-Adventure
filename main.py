@@ -1,5 +1,6 @@
 import os
 from time import sleep
+import time
 
 def darren_purchase(item):
   global player, darren_stock
