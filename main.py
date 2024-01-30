@@ -22,6 +22,57 @@ def darren_gone_caps(text):
     print(text)
 
 
+door_art = [
+""" ______________
+|\ ___________ /|
+| |  _ _ _ _  | |
+| | | | | | | | |
+| | |-+-+-+-| | |
+| | |-+-+-+-| | |
+| | |_|_|_|_| | |
+| |     ___   | |
+| |    /__/   | |
+| |   [%==] ()| |
+| |         ||| |
+| |         ()| |
+| |           | |
+| |           | |
+| |           | |
+|_|___________|_|""",
+
+""" ______________
+|\ ___________ /|
+| |  _ _ _ _  | |
+| | | | | | | | |
+| | |-+-+-+-| | |
+| | |-+-+=+%| | |
+| | |_|_|_|_| | |
+| |    ___    | |
+| |   [___] ()| |
+| |         ||| |
+| |         ()| |
+| |           | |
+| |           | |
+| |           | |
+|_|___________|_|""",
+
+
+""" ______________
+|\ ___________ /|
+| |  /|,| |   | |
+| | |,x,| |   | |
+| | |,x,' |   | |
+| | |,x   ,   | |
+| | |/    |%==| |
+| |    /] ,   | |
+| |   [/ ()   | |
+| |       |   | |
+| |       |   | |
+| |       |   | |
+| |      ,'   | |
+| |   ,'      | |
+|_|,'_________|_|"""]
+
 
 dd = """
 ⣿⣿⣿⡿⠿⣿⣶⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⠈⠹⢿⣿⣿⣿⣿
@@ -159,6 +210,15 @@ What would you like to do?
       if option == 'yes':
         if 'hairpin_bed' in player['inventory'] and 'hairpin_darren' in player[
             'inventory'] and 'hairpin_vikki' in player['inventory']:
+          clear()
+          print(door_art[0])
+          sleep(1)
+          clear()
+          print(door_art[1])
+          sleep(1)
+          clear()
+          print(door_art[2])
+          sleep(1)
           player['location'] = 'wardens office'
           
         else:
@@ -399,8 +459,9 @@ What would you like to do?
   while player['location'] == 'wardens office':
     clear()
     print("""You hear the lock click, the door swings open.
-  You look around. You see a falling apart desk with two drawers,
-  a wardrobe and a set of keys hanging on the wall.""")
+You look around. You see a falling apart desk with two drawers,
+a wardrobe and a set of keys hanging on the wall.""")
+    
     move = input("""
   What would you like to do?
     1. Check the drawers.
@@ -416,8 +477,8 @@ What would you like to do?
         b=("""You open the first drawer, its a photo of none other than Dodgy Darren himself with the warden""")
       else:
         b=("""You open the first drawer, its a photo of a dodgy looking fella standing with the warden""")
-      b+="""and an empty box of tabs.
-  You open the next drawer it contains a fiver, you pocket it and move on.
+      b+=""" and an empty box of tabs.
+You open the next drawer it contains a fiver, you pocket it and move on.
       """
       print(b)
       pause()
