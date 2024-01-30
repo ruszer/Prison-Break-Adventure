@@ -8,9 +8,6 @@ def darren_purchase(item):
   player['money'] -= darren_shop[item]
   darren_stock[f'{item}_stock'] -= 1
 
-#hwllo
-
-
 def clear():
   os.system('clear')
 
