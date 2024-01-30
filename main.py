@@ -1,6 +1,5 @@
 import os
 from time import sleep
-import time
 
 def darren_purchase(item):
   global player, darren_stock
@@ -11,7 +10,6 @@ def darren_purchase(item):
 
 def clear():
   os.system('clear')
-
 
 def pause():
   input('Press Enter to continue...')
